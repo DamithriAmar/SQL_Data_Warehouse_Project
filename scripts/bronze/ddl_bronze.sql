@@ -10,7 +10,7 @@ Purpose:
 
 USE DATAWAREHOUSEPROJECT;
 
-IF OBJECT ID ('bronze.crm_cust_info', 'U') IS NOT NULL
+IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
 	DROP TABLE bronze.crm_cust_info;
 CREATE TABLE bronze.crm_cust_info
 (
@@ -23,7 +23,7 @@ cst_gndr VARCHAR(1),
 cst_create_date DATE
 );
 
-IF OBJECT ID ('bronze.crm_prd_info', 'U') IS NOT NULL
+IF OBJECT_ID ('bronze.crm_prd_info', 'U') IS NOT NULL
 	DROP TABLE bronze.crm_prd_info;
 CREATE TABLE bronze.crm_prd_info
 (
@@ -36,7 +36,7 @@ prd_start_dt DATE,
 prd_end_dt DATE
 );
 
-IF OBJECT ID ('bronze.crm_sales_details', 'U') IS NOT NULL
+IF OBJECT_ID ('bronze.crm_sales_details', 'U') IS NOT NULL
 	DROP TABLE bronze.crm_sales_details;
 CREATE TABLE bronze.crm_sales_details
 (
@@ -51,7 +51,7 @@ sls_quantity INT,
 sls_price INT
 );
 
-IF OBJECT ID ('bronze.erp_CUST_AZ12', 'U') IS NOT NULL
+IF OBJECT_ID ('bronze.erp_CUST_AZ12', 'U') IS NOT NULL
 	DROP TABLE bronze.erp_CUST_AZ12;
 CREATE TABLE bronze.erp_CUST_AZ12
 (
@@ -60,7 +60,7 @@ BDATE DATE,
 GEN VARCHAR(6)
 );
 
-IF OBJECT ID ('bronze.erp_LOC_A101', 'U') IS NOT NULL
+IF OBJECT_ID ('bronze.erp_LOC_A101', 'U') IS NOT NULL
 	DROP TABLE bronze.erp_LOC_A101;
 CREATE TABLE bronze.erp_LOC_A101
 (
@@ -68,7 +68,7 @@ CID VARCHAR(50),
 CNTRY VARCHAR(50)
 );
 
-IF OBJECT ID ('bronze.erp_PX_CAT_G1V2', 'U') IS NOT NULL
+IF OBJECT_ID ('bronze.erp_PX_CAT_G1V2', 'U') IS NOT NULL
 	DROP TABLE bronze.erp_PX_CAT_G1V2;
 CREATE TABLE bronze.erp_PX_CAT_G1V2
 (

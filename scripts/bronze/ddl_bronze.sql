@@ -18,8 +18,8 @@ cst_id INT,
 cst_key VARCHAR(50),
 cst_firstname VARCHAR(50),
 cst_lastname VARCHAR(50),
-cst_marital_status VARCHAR(1),
-cst_gndr VARCHAR(1),
+cst_marital_status VARCHAR(50),
+cst_gndr VARCHAR(50),
 cst_create_date DATE
 );
 
@@ -57,7 +57,7 @@ CREATE TABLE bronze.erp_CUST_AZ12
 (
 CID VARCHAR(50),
 BDATE DATE,
-GEN VARCHAR(6)
+GEN VARCHAR(50)
 );
 
 IF OBJECT_ID ('bronze.erp_LOC_A101', 'U') IS NOT NULL

@@ -1,0 +1,40 @@
+-- Find the 5 top performing products
+SELECT TOP 5
+	p.product_name,
+	SUM(s.sales_amount) AS total_sales
+FROM gold.dim_products AS p
+LEFT JOIN gold.fact_sales AS s
+ON p.product_key = s.product_key
+GROUP BY p.product_name
+ORDER BY total_sales DESC;
+
+-- Find the 5 worst performing products
+SELECT TOP 5
+	p.product_name,
+	SUM(s.sales_amount) AS total_sales
+FROM gold.dim_products AS p
+LEFT JOIN gold.fact_sales AS s
+ON p.product_key = s.product_key
+GROUP BY p.product_name
+ORDER BY total_sales;
+
+-- Find the top 10 customers who have generated the highest revenue
+SELECT TOP 10
+	c.customer_id,
+	SUM(s.sales_amount) AS total_sales
+FROM gold.dim_customer AS c
+LEFT JOIN gold.fact_sales AS s
+ON c.customer_key = s.customer_key
+GROUP BY c.customer_id
+ORDER BY total_sales DESC;
+
+
+-- Find the 3 customers with least orders placed
+SELECT TOP 3
+	c.customer_id,
+	COUNT(*) AS total_orders
+FROM gold.dim_customer AS c
+LEFT JOIN gold.fact_sales AS s
+ON c.customer_key = s.customer_key
+GROUP BY c.customer_id
+ORDER BY total_orders;
